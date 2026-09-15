@@ -1,0 +1,12 @@
+services:
+  pytorch-learn:
+    build: .
+    image: pytorch-learn
+    container_name: pytorch-learn
+    ports:
+      - "8888:8888"
+    gpus: all
+    volumes:
+      - ./notebooks:/workspace
+    stdin_open: true
+    tty: true
